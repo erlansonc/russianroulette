@@ -1,0 +1,45 @@
+# Russian Roulette game
+# (c) 2014 by Chris
+# This is Chris' first time to program in Python as well as setup github
+
+import os
+import random
+import time
+
+os.system('clear')
+
+print "Welcome to Russian Roulette"
+print "Chris' first Python program\n\n"
+
+bang = 0
+bullet = random.randint(1,6)
+
+print "There are 6 chambers.  ONE has a bullet.\n"
+
+choice = int(raw_input("Pick a chamber =====>  "))
+
+if choice > 6:
+	print "\nYou only have 6 chambers!\n"
+
+if choice < 1:
+	print "\nHuh???\n"
+
+else:
+	print "\nSqueezing the trigger!\n"
+
+pauz = 0
+while pauz < 10:
+	print ".",
+#	time.sleep(1)
+	pauz = pauz + 1
+
+if choice == bullet:
+	print "\n\n\aBANG!  You're dead!"
+	bang = 1
+else:
+	print "\n\nPhew!  You're still alive."
+
+print "\n\n" 
+print bullet
+print "\n\n"
+
